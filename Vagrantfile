@@ -11,3 +11,6 @@ Vagrant.configure("2") do |config|
 	 box2.vm.network :private_network, ip: "192.168.56.102"
  end
 end
+
+#This is an Edit by Chance
+#Everything looks fine so far
