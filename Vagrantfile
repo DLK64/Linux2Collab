@@ -14,7 +14,7 @@ Vagrant.configure("2") do |config|
        
        box1.vm.provider :virtualbox do |v|
        box1.vm.provision "shell", inline: <<-SHELL
-       sudo apt-get install -y gimp
+       sudo apt-get install -y nano
               SHELL
        v.customize ["modifyvm", :id, "--memory", 1020]
      end
@@ -28,9 +28,5 @@ end
         box2.vm.box="scotch/box"
         box2.vm.network :forwarded_port, guest: 22, host: 10223, id: "ssh"
         box2.vm.network :private_network, ip: "192.168.56.102"
-
-        box2.vm.provision "shell", inline: <<-SHELL
-        sudo apt-get install -y gimp
-        SHELL
    end
 end
